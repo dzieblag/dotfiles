@@ -1,0 +1,75 @@
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[focused window]
+command=xtitle -s
+interval=persist
+align=center
+separator=false
+min_width=960
+
+# Volume
+[audio]
+#interval=-2
+interval=1
+command=/scripts/audio.sh
+color=#5555ff
+
+# Memory usage
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label=
+separator=false
+interval=1
+command=scripts/memory
+color=#ffa500
+separator=true
+
+[disk]
+label=
+instance=/mnt
+interval=30
+separator=true
+color=#ffff00
+
+[cpu_usage]
+label=
+command=/usr/lib/i3blocks/cpu_usage
+interval=1
+separator=true
+color=#00ff7f
+
+[temperature]
+label=
+interval=10
+command=/usr/lib/i3blocks/temperature
+color=#ff5555
+separator=true
+
+[iface]
+instance=enp3s0
+color=#00FFFF
+interval=10
+separator=true
+color=#adff00
+
+[time]
+command= date '+%d/%m/%Y %H:%M'
+interval=1

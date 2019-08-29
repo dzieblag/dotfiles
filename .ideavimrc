@@ -1,0 +1,4 @@
+set clipboard=unnamedplus,unnamed
+nmap == :action ReformatCode<cr>
+" mode in normal mode.
+imap <C-v> <Esc>:action $Paste<CR>
