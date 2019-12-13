@@ -1,7 +1,0 @@
-i3-gaps
-i3blocks
-i3status
-dmenu
-compton-tryone-git
-xorg
-
